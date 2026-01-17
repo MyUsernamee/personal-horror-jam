@@ -3,18 +3,19 @@
 [ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="Shader" uid="uid://bjanj1ed6lhg5" path="res://shaders/vhs.gdshader" id="3_4wyf3"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_k0juu"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rwgxs"]
 
 [sub_resource type="Sky" id="Sky_qfnet"]
-sky_material = SubResource("ProceduralSkyMaterial_k0juu")
+sky_material = SubResource("PanoramaSkyMaterial_rwgxs")
 
 [sub_resource type="Environment" id="Environment_71j4m"]
 background_mode = 1
-background_energy_multiplier = 0.0
+background_color = Color(8.663535e-07, 0, 0.3934247, 1)
 sky = SubResource("Sky_qfnet")
 fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 0.0258
+fog_sky_affect = 0.0
 volumetric_fog_density = 0.1229
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k0juu"]

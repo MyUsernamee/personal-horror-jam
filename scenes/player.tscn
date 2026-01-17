@@ -1,10 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://eaukojbt6f8y"]
+[gd_scene load_steps=20 format=3 uid="uid://c1llefvf21ehk"]
 
 [ext_resource type="Script" uid="uid://c54dkdqommv2y" path="res://scripts/player.gd" id="1_bom0h"]
 [ext_resource type="AudioStream" uid="uid://nbi4ch8o22kw" path="res://sounds/noise.wav" id="2_fjrip"]
-[ext_resource type="Script" uid="uid://dd72gghvntq2x" path="res://scripts/sub_viewport_scale.gd" id="2_qxu4u"]
+[ext_resource type="Script" path="res://scripts/sub_viewport_scale.gd" id="2_qxu4u"]
 [ext_resource type="AudioStream" uid="uid://vcq6pf2xw0i1" path="res://sounds/whispers/whisper_stream.tres" id="2_smehm"]
-[ext_resource type="Script" uid="uid://c6m7hdyjr1fpe" path="res://scripts/follow.gd" id="3_dqkch"]
+[ext_resource type="Script" path="res://scripts/follow.gd" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://bn6y01ev60dmi" path="res://models/hand.blend" id="3_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://nfxk88oa3itd" path="res://sounds/footsteps/footstep_stream.tres" id="4_smehm"]
 [ext_resource type="Script" uid="uid://bjpmu5sklv5h8" path="res://addons/raytraced_audio/raytraced_audio_listener.gd" id="5_tuyoq"]
@@ -79,7 +79,6 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.05893, 0)
 stream = ExtResource("4_smehm")
 volume_db = -16.203
-bus = &"LonlinessBus"
 
 [node name="CameraRoot" type="Marker3D" parent="."]
 unique_name_in_owner = true
@@ -109,7 +108,7 @@ metadata/_custom_type_script = "uid://bjpmu5sklv5h8"
 transform = Transform3D(0.512495, 0.041759, -0.857674, 0.835908, 0.204287, 0.509435, 0.196485, -0.97802, 0.069789, -0.486414, 0.341149, -0.528763)
 script = ExtResource("3_dqkch")
 target = NodePath("../CameraRoot/TargetHandPosition")
-speed = 10.0
+speed = 40.0
 
 [node name="Hand" type="Marker3D" parent="hand_model"]
 unique_name_in_owner = true

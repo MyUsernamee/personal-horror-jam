@@ -1,6 +1,10 @@
 extends CharacterBody3D
 class_name QuakeMover
 
+# Essentially helper class, adds do_vel and others that can be called in the 
+# _physics_process loop to manage movement
+# wish_dir is the direction you would like to move 
+
 const MAX_AIR_SPEED = 0.5
 const FRICTION = 40
 
