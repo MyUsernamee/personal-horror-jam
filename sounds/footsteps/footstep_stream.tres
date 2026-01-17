@@ -1,0 +1,25 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=10 format=3 uid="uid://nfxk88oa3itd"]
+
+[ext_resource type="AudioStream" uid="uid://cjybdqckin5ip" path="res://sounds/footsteps/footstep_concrete-07.wav" id="010b88dc27ebdc22ec50e08ba5d1813109641fdd"]
+[ext_resource type="AudioStream" uid="uid://dd7gnde1drxps" path="res://sounds/footsteps/footstep_concrete-08.wav" id="0653b6332c0b8418d916c80d2fabbe1cbda67c4c"]
+[ext_resource type="AudioStream" uid="uid://0puct8pdttb7" path="res://sounds/footsteps/footstep_concrete-10.wav" id="2105c7726e3f3d7a2094faba139a4c0c8d349d6d"]
+[ext_resource type="AudioStream" uid="uid://ddrbgbhtmora1" path="res://sounds/footsteps/footstep_concrete-02.wav" id="743183295bd5a3e360e800359e52458b096dbd32"]
+[ext_resource type="AudioStream" uid="uid://33iiwifdjvy3" path="res://sounds/footsteps/footstep_concrete-01.wav" id="af88fb4a2cbb7583c101c2b045ff296753130f9b"]
+[ext_resource type="AudioStream" uid="uid://d0d3xe1tyqy83" path="res://sounds/footsteps/footstep_concrete-06.wav" id="c31950a6c2fd9fc2839b7b858a920a01d62b8f50"]
+[ext_resource type="AudioStream" uid="uid://bqjuifp4lvc7u" path="res://sounds/footsteps/footstep_concrete-09.wav" id="d25460c2327aac79aed8977597f62e421520e57d"]
+[ext_resource type="AudioStream" uid="uid://l36fdoxgx3cj" path="res://sounds/footsteps/footstep_concrete-05.wav" id="dc9b7d974a9cbcb0643e6edd34bf3800522a102f"]
+[ext_resource type="AudioStream" uid="uid://d4a047ob247db" path="res://sounds/footsteps/footstep_concrete-03.wav" id="eff14df0817c7540c05fe9dc08d9345cc99a7c19"]
+
+[resource]
+random_pitch = 1.1
+random_volume_offset_db = 1.0
+streams_count = 9
+stream_0/stream = ExtResource("af88fb4a2cbb7583c101c2b045ff296753130f9b")
+stream_1/stream = ExtResource("743183295bd5a3e360e800359e52458b096dbd32")
+stream_2/stream = ExtResource("eff14df0817c7540c05fe9dc08d9345cc99a7c19")
+stream_3/stream = ExtResource("dc9b7d974a9cbcb0643e6edd34bf3800522a102f")
+stream_4/stream = ExtResource("c31950a6c2fd9fc2839b7b858a920a01d62b8f50")
+stream_5/stream = ExtResource("010b88dc27ebdc22ec50e08ba5d1813109641fdd")
+stream_6/stream = ExtResource("0653b6332c0b8418d916c80d2fabbe1cbda67c4c")
+stream_7/stream = ExtResource("d25460c2327aac79aed8977597f62e421520e57d")
+stream_8/stream = ExtResource("2105c7726e3f3d7a2094faba139a4c0c8d349d6d")

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cug0mk4nptw0"]
+
+[ext_resource type="Shader" uid="uid://dmc45i14n6gb5" path="res://shaders/outline.tres" id="1_povrl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_povrl")
+shader_parameter/Thickness = 0.10000000475
+shader_parameter/OutlineColor = Color(1, 1, 1, 1)
+shader_parameter/Alpha = 1.0

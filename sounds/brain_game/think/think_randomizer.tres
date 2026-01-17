@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://dcsjbkfaor5p3"]
+
+[ext_resource type="AudioStream" uid="uid://dglhhgiu1il6d" path="res://sounds/brain_game/think/think01.wav" id="1_uanfg"]
+[ext_resource type="AudioStream" uid="uid://ban8wky3lh5xl" path="res://sounds/brain_game/think/think02.wav" id="2_p7nws"]
+[ext_resource type="AudioStream" uid="uid://83xtfeb0lqn3" path="res://sounds/brain_game/think/think03.wav" id="3_3xj83"]
+[ext_resource type="AudioStream" uid="uid://cyjbnnwjhuhf7" path="res://sounds/brain_game/think/think04.wav" id="4_5qljc"]
+[ext_resource type="AudioStream" uid="uid://bxs1vlbtypi1e" path="res://sounds/brain_game/think/think05.wav" id="5_pvuwt"]
+
+[resource]
+random_pitch = 1.2
+random_volume_offset_db = 1.85
+streams_count = 5
+stream_0/stream = ExtResource("1_uanfg")
+stream_1/stream = ExtResource("2_p7nws")
+stream_2/stream = ExtResource("3_3xj83")
+stream_3/stream = ExtResource("4_5qljc")
+stream_4/stream = ExtResource("5_pvuwt")

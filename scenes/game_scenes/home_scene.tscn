@@ -1,0 +1,428 @@
+[gd_scene load_steps=32 format=3 uid="uid://dodypiv5ijswh"]
+
+[ext_resource type="PackedScene" uid="uid://747wo6wbfg5j" path="res://scenes/flickering_light.tscn" id="1_w6sqc"]
+[ext_resource type="Script" uid="uid://0kd7rolr8wxi" path="res://scripts/safe_area.gd" id="2_p40i6"]
+[ext_resource type="Script" uid="uid://buu8yuu17a3lv" path="res://scripts/area_play_controller.gd" id="3_shcp5"]
+[ext_resource type="Texture2D" uid="uid://caep224o8i5t5" path="res://textures/256x256/Stone/Stone_07-256x256.png" id="4_3p5xk"]
+[ext_resource type="Script" uid="uid://4n48ic4ml0k" path="res://scripts/item_holder.gd" id="5_cnvq7"]
+[ext_resource type="Script" uid="uid://dqu7j33qmbsi4" path="res://scripts/body_part_holder.gd" id="5_olvrj"]
+[ext_resource type="Resource" uid="uid://djokueogtpwdf" path="res://items/brain.tres" id="6_blwom"]
+[ext_resource type="Resource" uid="uid://7g617yewwt3p" path="res://items/kalimba.tres" id="6_o2dej"]
+[ext_resource type="PackedScene" uid="uid://b030a321vd8po" path="res://models/kalimba.blend" id="7_k4dj8"]
+[ext_resource type="Material" uid="uid://d60o7dl2p43i" path="res://materials/transparent_outline.tres" id="8_imv77"]
+[ext_resource type="Material" uid="uid://cug0mk4nptw0" path="res://materials/outline.tres" id="8_vuxpk"]
+[ext_resource type="PackedScene" uid="uid://1a4ik1loverq" path="res://models/brain.blend" id="9_j3ayk"]
+[ext_resource type="PackedScene" uid="uid://dir153xx55ybt" path="res://scenes/kalimba.tscn" id="10_p40i6"]
+[ext_resource type="PackedScene" uid="uid://dnngianqhql7l" path="res://scenes/game_scenes/brain_scene.tscn" id="11_ilg8a"]
+[ext_resource type="Script" uid="uid://imo2hwuchbib" path="res://scripts/player_spawn.gd" id="12_fbdj7"]
+[ext_resource type="PackedScene" uid="uid://bn6y01ev60dmi" path="res://models/hand.blend" id="14_jrrum"]
+[ext_resource type="Script" uid="uid://cs26njsolt1b3" path="res://scripts/visibility_teleporter.gd" id="14_lho5l"]
+[ext_resource type="PackedScene" uid="uid://b2aygtggwykc0" path="res://scenes/game_scenes/left_hand_scene.tscn" id="14_vuxpk"]
+[ext_resource type="Texture2D" uid="uid://chwy8f2yx4d84" path="res://textures/256x256/Tile/Tile_08-256x256.png" id="18_jrrum"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ithxo"]
+radius = 6.79811
+
+[sub_resource type="Animation" id="Animation_i7141"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/CSGBox3D/SpotLight3D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_qfnet"]
+resource_name = "panel_introduction_sequence"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LightPath")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/FlickeringLight:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/FlickeringLight:process_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/CSGBox3D/SpotLight3D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_71j4m"]
+resource_name = "start_sequence"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlickeringLight")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.0],
+"method": &"put_out"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LightPath/FlickeringLight2:process_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LightPath/FlickeringLight3:process_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LightPath/FlickeringLight4:process_mode")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LightPath/FlickeringLight5:process_mode")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LightPath/FlickeringLight2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LightPath/FlickeringLight3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LightPath/FlickeringLight4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("LightPath/FlickeringLight5:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Panel/CSGBox3D/SpotLight3D:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qfnet"]
+_data = {
+&"RESET": SubResource("Animation_i7141"),
+&"panel_introduction_sequence": SubResource("Animation_qfnet"),
+&"start_sequence": SubResource("Animation_71j4m")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_x5uxa"]
+radius = 12.2694
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7ytv"]
+albedo_texture = ExtResource("4_3p5xk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jh13r"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_blwom"]
+radius = 0.3657032
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xqxdr"]
+size = Vector3(0.331421, 0.0960693, 0.212402)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vuxpk"]
+size = Vector3(0.3013916, 0.36236572, 0.0887146)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vuxpk"]
+albedo_texture = ExtResource("18_jrrum")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="HomeScene" type="Marker3D"]
+script = ExtResource("2_p40i6")
+metadata/_custom_type_script = "uid://0kd7rolr8wxi"
+
+[node name="FlickeringLight" parent="." instance=ExtResource("1_w6sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 71)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00761878, -0.134339, 70.65865)
+collision_mask = 128
+audio_bus_override = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_ithxo")
+
+[node name="SafeMarker" type="Marker3D" parent="Area3D"]
+script = ExtResource("2_p40i6")
+metadata/_custom_type_script = "uid://0kd7rolr8wxi"
+
+[node name="SceneController" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+deterministic = true
+libraries = {
+&"": SubResource("AnimationLibrary_qfnet")
+}
+
+[node name="LightPath" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="FlickeringLight2" parent="LightPath" instance=ExtResource("1_w6sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 61)
+visible = false
+faultiness_probability = 0.6
+
+[node name="FlickeringLight3" parent="LightPath" instance=ExtResource("1_w6sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 47)
+visible = false
+faultiness_probability = 0.6
+
+[node name="FlickeringLight4" parent="LightPath" instance=ExtResource("1_w6sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 33)
+visible = false
+faultiness_probability = 0.6
+
+[node name="FlickeringLight5" parent="LightPath" instance=ExtResource("1_w6sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 19)
+visible = false
+faultiness_probability = 0.6
+
+[node name="Panel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="PanelArea" type="Area3D" parent="Panel"]
+collision_mask = 128
+audio_bus_override = true
+script = ExtResource("3_shcp5")
+animation = "panel_introduction_sequence"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Panel/PanelArea"]
+shape = SubResource("SphereShape3D_x5uxa")
+
+[node name="FlickeringLight" parent="Panel" instance=ExtResource("1_w6sqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.47585, 0)
+visible = false
+faultiness_probability = 0.9
+recovery_probability = 0.05
+
+[node name="Emitter" parent="Panel/FlickeringLight/LightObject" index="1"]
+spot_angle = 40.31
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Panel/FlickeringLight"]
+light_energy = 0.665
+omni_range = 8.839
+omni_attenuation = 2.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Panel"]
+transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 0, 1, 1, 4.371139e-08, -4.3711385e-08, 0, 1.166782, -5.43665)
+material_override = SubResource("StandardMaterial3D_e7ytv")
+size = Vector3(1.4064941, 3, 0.125)
+material = SubResource("StandardMaterial3D_jh13r")
+
+[node name="BrainItemHolder" type="Area3D" parent="Panel/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.107251, 0)
+collision_layer = 2
+monitoring = false
+monitorable = false
+script = ExtResource("5_olvrj")
+mini_game = ExtResource("11_ilg8a")
+desired_item_descriptor = ExtResource("6_blwom")
+display_text_empty = "Good ideas are born here. ( Gather Item (E) )"
+display_text_wrong = "Gather Item? (E)"
+display_text_correct = "THink."
+can_grab_item = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Panel/CSGBox3D/BrainItemHolder"]
+shape = SubResource("SphereShape3D_blwom")
+
+[node name="brain" parent="Panel/CSGBox3D/BrainItemHolder" instance=ExtResource("9_j3ayk")]
+transform = Transform3D(0.00075918814, 0.11852337, 3.9982436, 0.025609814, 3.9981616, -0.118525796, -3.999918, 0.025621064, -1.1199323e-09, 0, 0, 0)
+
+[node name="Cylinder" parent="Panel/CSGBox3D/BrainItemHolder/brain" index="0"]
+transform = Transform3D(0.016374385, -0.06625666, -0.031095583, 0.07273292, 0.018288633, -0.00066847214, 0.008173151, -0.030009693, 0.06824675, 0, 0, 0)
+surface_material_override/0 = ExtResource("8_vuxpk")
+
+[node name="KalimbaItemHolder" type="Area3D" parent="Panel/CSGBox3D"]
+transform = Transform3D(0.896456, 0, -0.443134, -0.443132, -0.00277507, -0.896452, -0.00122973, 0.999996, -0.00248775, 4.29153e-06, 0.490692, 0.0935059)
+collision_layer = 2
+script = ExtResource("5_cnvq7")
+desired_item_descriptor = ExtResource("6_o2dej")
+display_text_empty = "My heart."
+display_text_wrong = "Only one thing can speak like it can."
+display_text_correct = "Where I will go."
+can_grab_item = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Panel/CSGBox3D/KalimbaItemHolder"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_xqxdr")
+
+[node name="kalimba" parent="Panel/CSGBox3D/KalimbaItemHolder" instance=ExtResource("7_k4dj8")]
+transform = Transform3D(1, 1.16415e-10, 1.94209e-08, 1.16415e-10, 1, 0, -1.0403e-08, 0, 1, 0, 0, 0)
+
+[node name="Cube" parent="Panel/CSGBox3D/KalimbaItemHolder/kalimba" index="0"]
+material_override = ExtResource("8_imv77")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Panel/CSGBox3D"]
+transform = Transform3D(0.807282, -0.270596, 0.524474, -0.271966, 0.618128, 0.737531, -0.523766, -0.738035, 0.425411, 4.88262, 6.0582, 2.9594)
+visible = false
+light_energy = 4.96
+shadow_enabled = true
+spot_range = 24.4548
+spot_angle = 15.0036
+
+[node name="Area3D" type="Area3D" parent="Panel/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5430553, 0.06365967, 0.10284901)
+collision_layer = 2
+monitoring = false
+monitorable = false
+script = ExtResource("5_olvrj")
+mini_game = ExtResource("14_vuxpk")
+display_text_empty = "I miss it's warmth. ( Gather (E) )"
+display_text_wrong = "Nothing holds quite like it. ( Gather (E) )"
+display_text_correct = "Held at last."
+
+[node name="hand" parent="Panel/CSGBox3D/Area3D" instance=ExtResource("14_jrrum")]
+transform = Transform3D(0.02631638, -0.012468496, 0.99957585, -0.08661558, -0.99619013, -0.010145888, -0.99589413, 0.08631185, 0.027296081, 0, 0, 0)
+
+[node name="LeftHand" parent="Panel/CSGBox3D/Area3D/hand/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("8_imv77")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Panel/CSGBox3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.040222168, -0.08047485, 0.003616333)
+shape = SubResource("BoxShape3D_vuxpk")
+
+[node name="PlayerSpawn" type="Marker3D" parent="Panel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710618, 0)
+script = ExtResource("12_fbdj7")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="Panel"]
+aabb = AABB(-12.267775, -12.424493, -12.732972, 24.53555, 24.848986, 25.465944)
+script = ExtResource("14_lho5l")
+radius = 16.0
+
+[node name="Kalimba" parent="." node_paths=PackedStringArray("start_light") instance=ExtResource("10_p40i6")]
+unique_name_in_owner = true
+transform = Transform3D(0.706984, 0, 0.70723, 0, 1, 0, -0.70723, 0, 0.706984, -0.0161653, 0.03384602, 71.0312)
+start_light = NodePath("../FlickeringLight")
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_vuxpk")
+use_collision = true
+size = Vector3(1000, 1, 1000)
+
+[connection signal="body_entered" from="Panel/PanelArea" to="Panel/VisibleOnScreenNotifier3D" method="_on_panel_area_body_entered" flags=6]
+
+[editable path="Panel/FlickeringLight"]
+[editable path="Panel/CSGBox3D/BrainItemHolder/brain"]
+[editable path="Panel/CSGBox3D/KalimbaItemHolder/kalimba"]
+[editable path="Panel/CSGBox3D/Area3D/hand"]

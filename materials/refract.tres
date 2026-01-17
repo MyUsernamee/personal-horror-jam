@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bac5h0bkr7ge7"]
+
+[ext_resource type="Shader" uid="uid://c7eiwmatbc1ef" path="res://shaders/refract.tres" id="1_cqonu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_cqonu")
+shader_parameter/Refraction = 0.1
+shader_parameter/Opacity = 0.0

@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d60o7dl2p43i"]
+
+[ext_resource type="Shader" uid="uid://dmc45i14n6gb5" path="res://shaders/outline.tres" id="1_lv57v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_geyu2"]
+render_priority = 1
+shader = ExtResource("1_lv57v")
+shader_parameter/Thickness = 0.02000000095
+shader_parameter/OutlineColor = Color(1, 1, 1, 1)
+shader_parameter/Alpha = 1.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_geyu2")
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 0)
+grow_amount = -11.636

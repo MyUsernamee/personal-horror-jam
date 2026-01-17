@@ -1,0 +1,3 @@
+[gd_scene load_steps=0 format=3 uid="uid://dw5xr2axi3uoh"]
+
+[node name="BaseWorld" type="Node3D"]

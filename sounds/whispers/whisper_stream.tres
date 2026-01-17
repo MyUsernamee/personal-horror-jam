@@ -1,0 +1,59 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=27 format=3 uid="uid://vcq6pf2xw0i1"]
+
+[ext_resource type="AudioStream" uid="uid://xaksuyyewgq2" path="res://sounds/whispers/whisper-01.wav" id="1_85086"]
+[ext_resource type="AudioStream" uid="uid://1v4rmpe8n2rc" path="res://sounds/whispers/whisper-15.wav" id="2_jluip"]
+[ext_resource type="AudioStream" uid="uid://841p3ikgy7cx" path="res://sounds/whispers/whisper-11.wav" id="3_hwhxo"]
+[ext_resource type="AudioStream" uid="uid://uh4g5i1w3my7" path="res://sounds/whispers/whisper-18.wav" id="3_xwf5d"]
+[ext_resource type="AudioStream" uid="uid://dncgook20t5af" path="res://sounds/whispers/whisper-02.wav" id="4_jluip"]
+[ext_resource type="AudioStream" uid="uid://gyxpc4qa813a" path="res://sounds/whispers/whisper-12.wav" id="4_kcs4h"]
+[ext_resource type="AudioStream" uid="uid://ccp55iyd2rjc" path="res://sounds/whispers/whisper-13.wav" id="5_sasq0"]
+[ext_resource type="AudioStream" uid="uid://bcvvajydfr1rt" path="res://sounds/whispers/whisper-14.wav" id="6_tjiua"]
+[ext_resource type="AudioStream" uid="uid://cqn4shdyjdi7r" path="res://sounds/whispers/whisper-16.wav" id="8_73rum"]
+[ext_resource type="AudioStream" uid="uid://c1i48y5gpibey" path="res://sounds/whispers/whisper-17.wav" id="9_bo4qc"]
+[ext_resource type="AudioStream" uid="uid://b6b184g67n57a" path="res://sounds/whispers/whisper-19.wav" id="11_1fbyr"]
+[ext_resource type="AudioStream" uid="uid://5tonurwunybf" path="res://sounds/whispers/whisper-20.wav" id="12_une8t"]
+[ext_resource type="AudioStream" uid="uid://dp4h345qk3ebh" path="res://sounds/whispers/whisper-03.wav" id="13_78iow"]
+[ext_resource type="AudioStream" uid="uid://b7ix1k7p1q4re" path="res://sounds/whispers/whisper-21.wav" id="14_kj76f"]
+[ext_resource type="AudioStream" uid="uid://bq25h5wbv33tm" path="res://sounds/whispers/whisper-22.wav" id="15_6k1lu"]
+[ext_resource type="AudioStream" uid="uid://4kkoc1nx0ih3" path="res://sounds/whispers/whisper-23.wav" id="16_skiu5"]
+[ext_resource type="AudioStream" uid="uid://bdm24jt6f0hbl" path="res://sounds/whispers/whisper-24.wav" id="17_23dy4"]
+[ext_resource type="AudioStream" uid="uid://bcda65fwhw04p" path="res://sounds/whispers/whisper-25.wav" id="18_ujxqj"]
+[ext_resource type="AudioStream" uid="uid://3frlg0t2ai1x" path="res://sounds/whispers/whisper-26.wav" id="19_k1c8u"]
+[ext_resource type="AudioStream" uid="uid://f8x6nqk4s11" path="res://sounds/whispers/whisper-04.wav" id="20_kgjds"]
+[ext_resource type="AudioStream" uid="uid://b7qs4sj5gtrlm" path="res://sounds/whispers/whisper-05.wav" id="21_bxow6"]
+[ext_resource type="AudioStream" uid="uid://c8tctmlkw3agy" path="res://sounds/whispers/whisper-06.wav" id="22_3ytm1"]
+[ext_resource type="AudioStream" uid="uid://yyh0tjmsu5mv" path="res://sounds/whispers/whisper-07.wav" id="23_pnftv"]
+[ext_resource type="AudioStream" uid="uid://xebdaipma1xi" path="res://sounds/whispers/whisper-08.wav" id="24_a4ndx"]
+[ext_resource type="AudioStream" uid="uid://d3sqngg1paeh5" path="res://sounds/whispers/whisper-09.wav" id="25_c0o4q"]
+[ext_resource type="AudioStream" uid="uid://baxx04ox6ny1l" path="res://sounds/whispers/whisper-10.wav" id="26_4mdwo"]
+
+[resource]
+random_pitch = 2.0
+random_volume_offset_db = 1.0
+streams_count = 26
+stream_0/stream = ExtResource("1_85086")
+stream_1/stream = ExtResource("4_jluip")
+stream_2/stream = ExtResource("13_78iow")
+stream_3/stream = ExtResource("20_kgjds")
+stream_4/stream = ExtResource("21_bxow6")
+stream_5/stream = ExtResource("22_3ytm1")
+stream_6/stream = ExtResource("23_pnftv")
+stream_7/stream = ExtResource("24_a4ndx")
+stream_8/stream = ExtResource("25_c0o4q")
+stream_9/stream = ExtResource("26_4mdwo")
+stream_10/stream = ExtResource("3_hwhxo")
+stream_11/stream = ExtResource("4_kcs4h")
+stream_12/stream = ExtResource("5_sasq0")
+stream_13/stream = ExtResource("6_tjiua")
+stream_14/stream = ExtResource("2_jluip")
+stream_15/stream = ExtResource("8_73rum")
+stream_16/stream = ExtResource("9_bo4qc")
+stream_17/stream = ExtResource("3_xwf5d")
+stream_18/stream = ExtResource("11_1fbyr")
+stream_19/stream = ExtResource("12_une8t")
+stream_20/stream = ExtResource("14_kj76f")
+stream_21/stream = ExtResource("15_6k1lu")
+stream_22/stream = ExtResource("16_skiu5")
+stream_23/stream = ExtResource("17_23dy4")
+stream_24/stream = ExtResource("18_ujxqj")
+stream_25/stream = ExtResource("19_k1c8u")
