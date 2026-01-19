@@ -1,25 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://c1llefvf21ehk"]
+[gd_scene load_steps=17 format=3 uid="uid://c1llefvf21ehk"]
 
 [ext_resource type="Script" uid="uid://c54dkdqommv2y" path="res://scripts/player.gd" id="1_bom0h"]
 [ext_resource type="AudioStream" uid="uid://nbi4ch8o22kw" path="res://sounds/noise.wav" id="2_fjrip"]
 [ext_resource type="Script" path="res://scripts/sub_viewport_scale.gd" id="2_qxu4u"]
-[ext_resource type="AudioStream" uid="uid://vcq6pf2xw0i1" path="res://sounds/whispers/whisper_stream.tres" id="2_smehm"]
 [ext_resource type="Script" path="res://scripts/follow.gd" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://bn6y01ev60dmi" path="res://models/hand.blend" id="3_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://nfxk88oa3itd" path="res://sounds/footsteps/footstep_stream.tres" id="4_smehm"]
 [ext_resource type="Script" uid="uid://bjpmu5sklv5h8" path="res://addons/raytraced_audio/raytraced_audio_listener.gd" id="5_tuyoq"]
-
-[sub_resource type="Curve" id="Curve_jhx03"]
-_limits = [0.0, 0.4, 0.0, 200.0]
-_data = [Vector2(50, 0), 0.0, 0.0, 0, 0, Vector2(100, 0.4), 0.0, 0.0, 0, 0]
-point_count = 2
-metadata/_snap_enabled = true
-metadata/_snap_count = 20
-
-[sub_resource type="Curve" id="Curve_o8fc1"]
-_limits = [0.0, 1.0, 0.0, 200.0]
-_data = [Vector2(59.574, 0), 0.0, 0.0, 0, 0, Vector2(200, 1), 0.0, 0.0, 0, 0]
-point_count = 2
 
 [sub_resource type="Curve" id="Curve_xo05s"]
 _limits = [0.03, 0.2, 0.0, 200.0]
@@ -58,12 +45,9 @@ collision_mask = 13
 wall_min_slide_angle = 1.0472
 floor_max_angle = 1.0472
 script = ExtResource("1_bom0h")
-lonliness_curve = SubResource("Curve_jhx03")
-insanity_curve = SubResource("Curve_o8fc1")
 vhs_wiggle_curve = SubResource("Curve_xo05s")
 vhs_smear_curve = SubResource("Curve_dss4m")
 noise_sound_curve = SubResource("Curve_7t5mc")
-whisper_stream = ExtResource("2_smehm")
 footstep_stream = ExtResource("4_smehm")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="."]
